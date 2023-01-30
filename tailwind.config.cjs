@@ -128,12 +128,12 @@ module.exports = {
         10: '40px',
       },
     },
-    // colors: {
-    //   primary: "#224570",
-    //   secondary: "#2A4F7C",
-    //   ternary: "#153153",
-    //   quaternary: "#BAD9FF",
-    // },
+    colors: {
+      "(brown)": "#362D29",
+      "(black)": "#000",
+      "(white)": "#fff",
+      "(orange)": "#F3953F",
+    },
     screens: {
       "2xl": { "max": "1920px" },
       "xl": { "max": "1140px" },

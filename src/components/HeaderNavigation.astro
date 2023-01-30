@@ -8,7 +8,10 @@
 ---
 
 <header class="flex">
-  { (logo !== '') && <div> <img src={logo}> </div> }
+
+  <div>
+    { logo === '' ? 'Piter Bulka' : <img src={logo} alt="Питер Булка логотип" /> }
+  </div>
   <menu class="flex gap-x-2">
     { menu.map((link, i) => (<li> <a href={link.url} set:text={link.text} /> </li>)) }
   </menu>

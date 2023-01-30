@@ -1,0 +1,63 @@
+---
+
+  interface Props {
+    title?: string
+    subtitle?: string
+    button?: {
+      text?: string
+      url?: string
+    }
+  }
+  const {title, subtitle, button} = Astro.props as Props
+---
+
+
+<!-- todos: 
+  написать слайдер
+  написать конфиг для tw
+-->
+
+<div class="bg-(brown) p-14 text-(white) hero relative before:absolute before:inset-0 before:bg-(black) before:opacity-60 before:rounded-[inherit] isolate before:-z-[1]">
+  <h1 set:text={title} class="hero-title"/>
+  <p set:text={subtitle} class="hero-subtitle" />
+  <button class="rounded-full bg-(orange)">
+    <a href={button.url} class="p-7 inline-flex gap-x-5 group">
+      {button.text}
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="-scale-100 w-6 h-6 group-hover:translate-x-2 transition-transform">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+      </svg>
+    </a>
+  </button>
+</div>
+
+<style>
+  .hero {
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i3.photo.2gis.com/images/branch/0/30258560094749029_1b96.jpg');
+    min-height: 600px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 600;
+    max-width: 575px;
+  }
+  
+  .hero-subtitle {
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-top: 26px;
+    margin-bottom: 40px;
+  }
+</style>

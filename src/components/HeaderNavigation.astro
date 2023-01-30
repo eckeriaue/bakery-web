@@ -1,0 +1,15 @@
+---
+
+  interface Props {
+    menu: {text: string, url: string}[]
+    logo?: string
+  }
+  const {logo = '', menu = [] } = Astro.props
+---
+
+<header class="flex">
+  { (logo !== '') && <div> <img src={logo}> </div> }
+  <menu class="flex gap-x-2">
+    { menu.map((link, i) => (<li> <a href={link.url} set:text={link.text} /> </li>)) }
+  </menu>
+</header>

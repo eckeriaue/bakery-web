@@ -20,8 +20,8 @@
 <div class="bg-(brown) p-14 text-(white) hero relative before:absolute before:inset-0 before:bg-(black) before:opacity-60 before:rounded-[inherit] isolate before:-z-[1]">
   <h1 set:text={title} class="hero-title"/>
   <p set:text={subtitle} class="hero-subtitle" />
-  <button class="rounded-full bg-(orange)">
-    <a href={button.url} class="p-7 inline-flex gap-x-5 group">
+  <button class="rounded-full bg-(orange) active:scale-95 transition-transform">
+    <a href={button.url} class="px-6 inline-flex gap-x-2 group transition-all rounded-full text-base font-medium h-14 items-center">
       {button.text}
       <svg
       xmlns="http://www.w3.org/2000/svg"

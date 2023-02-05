@@ -130,6 +130,7 @@ module.exports = {
     },
     colors: {
       "(brown)": "#362D29",
+      "(black-1)": "#0d1121",
       "(black)": "#000",
       "(white)": "#fff",
       "(orange)": "#F3953F",

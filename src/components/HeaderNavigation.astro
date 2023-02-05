@@ -1,5 +1,5 @@
 ---
-
+  import PiterButton from './PiterButton.astro'
   interface Props {
     menu: {text: string, url: string}[]
     logo?: string
@@ -7,12 +7,22 @@
   const {logo = '', menu = [] } = Astro.props
 ---
 
-<header class="flex">
-
+<header class="container flex mx-auto py-5 text-(black-1) justify-between">
   <div>
-    { logo === '' ? 'Piter Bulka' : <img src={logo} alt="Питер Булка логотип" /> }
+    <a href="/" class="text-4xl flex items-center h-full">
+      { logo === '' ? 'Piter Bulka' : <img src={logo} alt="Питер Булка логотип" /> }
+    </a>
   </div>
-  <menu class="flex gap-x-2">
-    { menu.map((link, i) => (<li> <a href={link.url} set:text={link.text} /> </li>)) }
+  <menu class="flex gap-x-4 font-semibold text-lg">
+    {
+      menu.map((link, i) => (
+        <li class="flex items-center">
+          <a class="px-2 h-full w-full flex items-center" href={link.url} set:text={link.text} />
+        </li>
+        )
+      )
+    }
   </menu>
+
+  <PiterButton />
 </header>
